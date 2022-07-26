@@ -53,16 +53,22 @@
   </build>
 
   <dependencies>
-<!--   Uncommenting these two dependency sections makes the warning go away-->
-
+<!--  Uncomment this dependency out to see warning-->
+<!--    <dependency>-->
+<!--      <groupId>org.slf4j</groupId>-->
+<!--      <artifactId>slf4j-simple</artifactId>-->
+<!--      <version>2.0.0-alpha7</version>-->
+<!--      <scope>optional</scope>-->
+<!--    </dependency>-->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>2.0.0-alpha7</version>
-      <scope>optional</scope>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-netty-shaded</artifactId>
+      <version>1.47.0</version>
     </dependency>
 
   </dependencies>
+
+
 
   <profiles>
     <profile>
@@ -88,7 +94,8 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
-                <buildArg>--initialize-at-build-time=org.slf4j.impl.SimpleLogger,org.slf4j.LoggerFactory</buildArg>
+            <!--  Uncomment this --initialize-at-build-time line when including the slf4j dependency-->
+            <!--  <buildArg>&#45;&#45;initialize-at-build-time=org.slf4j.impl.SimpleLogger,org.slf4j.LoggerFactory</buildArg>-->
               </buildArgs>
             </configuration>
           </plugin>
