@@ -57,15 +57,14 @@
 <!--    <dependency>-->
 <!--      <groupId>org.slf4j</groupId>-->
 <!--      <artifactId>slf4j-simple</artifactId>-->
-<!--      <version>2.0.0-alpha7</version>-->
-<!--      <scope>optional</scope>-->
+<!--      <version>1.7.36</version>-->
+<!--      <optional>true</optional>-->
 <!--    </dependency>-->
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty-shaded</artifactId>
       <version>1.47.0</version>
     </dependency>
-
   </dependencies>
 
 
@@ -94,8 +93,7 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
-            <!--  Uncomment this --initialize-at-build-time line when including the slf4j dependency-->
-            <!--  <buildArg>&#45;&#45;initialize-at-build-time=org.slf4j.impl.SimpleLogger,org.slf4j.LoggerFactory</buildArg>-->
+<!--                <buildArg>&#45;&#45;initialize-at-build-time=org.slf4j.impl.SimpleLogger,org.slf4j.LoggerFactory,org.slf4j.impl.StaticLoggerBinder</buildArg>-->
               </buildArgs>
             </configuration>
           </plugin>
